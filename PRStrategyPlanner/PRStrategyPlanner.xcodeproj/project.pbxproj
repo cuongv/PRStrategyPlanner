@@ -17,6 +17,11 @@
 		DB3B2EA221AAED2D00C10718 /* PowerRanger+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA021AAED2D00C10718 /* PowerRanger+CoreDataClass.swift */; };
 		DB3B2EA321AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA121AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift */; };
 		DB3B2EA521AAEDAA00C10718 /* PowerRangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA421AAEDAA00C10718 /* PowerRangerView.swift */; };
+		DB3B2EA921AAF42100C10718 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA821AAF42100C10718 /* ColorUtils.swift */; };
+		DB3B2EAB21AAF63100C10718 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EAA21AAF63100C10718 /* MainViewModel.swift */; };
+		DB3B2EAD21AAF6BE00C10718 /* PRListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */; };
+		DB3B2EAF21AAF70300C10718 /* PRListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */; };
+		DB3B2EB121AB001700C10718 /* PRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		DB3B2EA021AAED2D00C10718 /* PowerRanger+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PowerRanger+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DB3B2EA121AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PowerRanger+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DB3B2EA421AAEDAA00C10718 /* PowerRangerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerRangerView.swift; sourceTree = "<group>"; };
+		DB3B2EA821AAF42100C10718 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		DB3B2EAA21AAF63100C10718 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListViewModel.swift; sourceTree = "<group>"; };
+		DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListCellViewModel.swift; sourceTree = "<group>"; };
+		DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 		DB3B2E7521AADE5100C10718 /* PRStrategyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				DB3B2EA721AAF3C900C10718 /* Utils */,
 				DB3B2E9C21AAE9E800C10718 /* Models */,
 				DB3B2E9B21AAE9E000C10718 /* Modules */,
 				DB3B2E9921AAE97900C10718 /* Resources */,
@@ -143,6 +154,9 @@
 		DB3B2E9E21AAEB2C00C10718 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DB3B2EAA21AAF63100C10718 /* MainViewModel.swift */,
+				DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */,
+				DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -152,8 +166,17 @@
 			children = (
 				DB3B2E7821AADE5100C10718 /* ViewController.swift */,
 				DB3B2EA421AAEDAA00C10718 /* PowerRangerView.swift */,
+				DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DB3B2EA721AAF3C900C10718 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB3B2EA821AAF42100C10718 /* ColorUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,11 +302,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB3B2E7F21AADE5100C10718 /* PRStrategyPlanner.xcdatamodeld in Sources */,
+				DB3B2EA921AAF42100C10718 /* ColorUtils.swift in Sources */,
 				DB3B2E7921AADE5100C10718 /* ViewController.swift in Sources */,
 				DB3B2EA321AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift in Sources */,
 				DB3B2EA221AAED2D00C10718 /* PowerRanger+CoreDataClass.swift in Sources */,
 				DB3B2E7721AADE5100C10718 /* AppDelegate.swift in Sources */,
+				DB3B2EAF21AAF70300C10718 /* PRListCellViewModel.swift in Sources */,
+				DB3B2EAD21AAF6BE00C10718 /* PRListViewModel.swift in Sources */,
 				DB3B2EA521AAEDAA00C10718 /* PowerRangerView.swift in Sources */,
+				DB3B2EB121AB001700C10718 /* PRTableViewCell.swift in Sources */,
+				DB3B2EAB21AAF63100C10718 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

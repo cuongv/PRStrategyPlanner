@@ -9,8 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
+  @IBOutlet weak var viewMap: UIView!
+  @IBOutlet weak var tblViewPR: UITableView!
+  private lazy var mainViewModel = MainViewModel()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+  }
+  
+  @IBAction func btnSaveClicked(_ sender: Any) {
+  }
+}
+
+extension ViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 1
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    var cell = tableView.dequeueReusableCell(withIdentifier: "PRCell")
+    if cell == nil {
+      cell = PRTableViewCell()
+    }
+    return cell!
   }
 }

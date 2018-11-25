@@ -10,6 +10,7 @@ import UIKit
 
 final class PowerRangerView: UIView {
   typealias CompleteBlock = () -> Void
+  
   private let aniDuration = 0.5
   private var aniLayer: CALayer!
   
@@ -17,7 +18,6 @@ final class PowerRangerView: UIView {
     super.init(frame: frame)
     //Prevent multi-drag issues for now
     isExclusiveTouch = true
-    
     aniLayer = CALayer()
     aniLayer.backgroundColor = UIColor.red.cgColor
     aniLayer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)

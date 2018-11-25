@@ -41,6 +41,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="btnSaveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gt4-gU-kMX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,6 +59,35 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-yR-KT9">
                                 <rect key="frame" x="16" y="64" width="288" height="688"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PRCell" id="fZV-4A-WCg" customClass="PRTableViewCell" customModule="PRStrategyPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZV-4A-WCg" id="p68-Cq-L2c">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-qJ-U6C">
+                                                    <rect key="frame" x="8" y="8" width="50" height="50.5"/>
+                                                    <color key="backgroundColor" red="0.98999999999999999" green="0.13" blue="0.14999999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2ek-qJ-U6C" secondAttribute="height" id="CQn-V1-9te"/>
+                                                        <constraint firstAttribute="height" constant="50" id="USG-XE-1HN"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2ek-qJ-U6C" firstAttribute="top" secondItem="p68-Cq-L2c" secondAttribute="top" constant="8" id="2hV-Tg-Hfi"/>
+                                                <constraint firstAttribute="bottom" secondItem="2ek-qJ-U6C" secondAttribute="bottom" constant="8" id="9NX-eG-KN7"/>
+                                                <constraint firstItem="2ek-qJ-U6C" firstAttribute="leading" secondItem="p68-Cq-L2c" secondAttribute="leading" constant="8" id="k59-Li-s5p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="slY-2b-hhU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PxF-ja-Yl4"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgW-Iy-Az3">
                                 <rect key="frame" x="320" y="64" width="688" height="688"/>
@@ -81,6 +113,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tblViewPR" destination="Vdu-yR-KT9" id="yh8-PG-F4w"/>
+                        <outlet property="viewMap" destination="JgW-Iy-Az3" id="Bl1-j2-0fm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
