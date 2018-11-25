@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PRStrategyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXz-Nu-apK" userLabel="Title View">
+                                <rect key="frame" x="16" y="20" width="992" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Rangers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAw-tw-GFL">
+                                        <rect key="frame" x="0.0" y="9.5" width="137" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oql-q0-3ge">
+                                        <rect key="frame" x="304" y="9" width="41" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoe-qD-T4U">
+                                        <rect key="frame" x="932" y="0.0" width="60" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="RLj-Np-4vq"/>
+                                            <constraint firstAttribute="width" constant="60" id="sec-in-0Xv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TAw-tw-GFL" firstAttribute="leading" secondItem="zXz-Nu-apK" secondAttribute="leading" id="8fF-ER-UF1"/>
+                                    <constraint firstAttribute="trailing" secondItem="eoe-qD-T4U" secondAttribute="trailing" id="CdP-jg-ujF"/>
+                                    <constraint firstItem="TAw-tw-GFL" firstAttribute="centerY" secondItem="zXz-Nu-apK" secondAttribute="centerY" id="ZVS-mA-BN5"/>
+                                    <constraint firstItem="oql-q0-3ge" firstAttribute="centerY" secondItem="zXz-Nu-apK" secondAttribute="centerY" id="m6f-Gb-5jB"/>
+                                    <constraint firstItem="eoe-qD-T4U" firstAttribute="centerY" secondItem="zXz-Nu-apK" secondAttribute="centerY" id="rWd-31-Rb9"/>
+                                    <constraint firstAttribute="height" constant="44" id="xAs-uz-twI"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-yR-KT9">
+                                <rect key="frame" x="16" y="64" width="288" height="688"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgW-Iy-Az3">
+                                <rect key="frame" x="320" y="64" width="688" height="688"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JgW-Iy-Az3" secondAttribute="height" multiplier="1:1" id="Y5O-8p-qhA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vdu-yR-KT9" secondAttribute="bottom" constant="16" id="2Un-1x-VUt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zXz-Nu-apK" secondAttribute="trailing" constant="16" id="EJd-UD-pfz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JgW-Iy-Az3" secondAttribute="bottom" constant="16" id="Miv-3V-nZM"/>
+                            <constraint firstItem="oql-q0-3ge" firstAttribute="leading" secondItem="JgW-Iy-Az3" secondAttribute="leading" id="P8w-Kw-Cnu"/>
+                            <constraint firstItem="zXz-Nu-apK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U1R-jb-scE"/>
+                            <constraint firstItem="JgW-Iy-Az3" firstAttribute="leading" secondItem="Vdu-yR-KT9" secondAttribute="trailing" constant="16" id="UaP-kL-ra7"/>
+                            <constraint firstItem="Vdu-yR-KT9" firstAttribute="top" secondItem="zXz-Nu-apK" secondAttribute="bottom" id="f1s-9j-b38"/>
+                            <constraint firstItem="JgW-Iy-Az3" firstAttribute="top" secondItem="zXz-Nu-apK" secondAttribute="bottom" id="o16-DA-Ndv"/>
+                            <constraint firstItem="zXz-Nu-apK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rbm-3p-k5v"/>
+                            <constraint firstItem="Vdu-yR-KT9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ro3-tY-ueO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JgW-Iy-Az3" secondAttribute="trailing" constant="16" id="sed-LX-e9K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59375" y="133.59375"/>
         </scene>
     </scenes>
 </document>
