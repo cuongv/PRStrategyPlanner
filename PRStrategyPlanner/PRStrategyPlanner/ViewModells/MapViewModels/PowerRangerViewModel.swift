@@ -6,8 +6,10 @@
 //  Copyright © 2018 Vuong Cuong. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct PowerRangerViewModel {
-  
+  var color: UIColor
+  var x: Int
+  var y: Int
 }

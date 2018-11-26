@@ -24,12 +24,15 @@ class ViewController: UIViewController {
       
     }
     
-    prListViewModel = PRListViewModel { state in
-      print("updated \(state.editingStype)")
+    prListViewModel = PRListViewModel { [weak self] state in
+      switch state.editingStype {
+      case let .update(_, index):
+        self?.tblViewPR.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+      default:
+        self?.tblViewPR.reloadData()
+        break
+      }
     }
-//    prListViewModel.reloadListCallBack = { [weak self] in
-//      self?.tblViewPR.reloadData()
-//    }
   }
   
   @IBAction func btnSaveClicked(_ sender: Any) {
@@ -47,13 +50,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
       cell = PRTableViewCell()
     }
     let item = prListViewModel.getItem(atIndex: indexPath.row)
-    cell?.lblColorName.text = item?.name
-    cell?.viewColor.backgroundColor = item?.color
+    cell?.configCell(item)
     return cell!
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: false)
     prListViewModel.pressedItem(atIndex: indexPath)
   }
 }

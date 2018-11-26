@@ -10,7 +10,7 @@ import Foundation
 
 protocol ViewModelArrayProtocol {
   associatedtype T
-  var state: State<T> { get set}
+  var state: State<T> { get }
 }
 
 struct State<T> {
@@ -26,6 +26,12 @@ struct State<T> {
       switch editingStype {
       case let .insert(newElement, index):
         data.insert(newElement, at: index)
+      case let .update(newElement, index):
+        if index < data.count {
+          data[index] = newElement
+        } else {
+          assertionFailure("Index out of bound")
+        }
       case let .remove(index):
         data.remove(at: index)
       default:

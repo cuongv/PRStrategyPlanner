@@ -78,6 +78,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB3ACCE021AC47D700BD9132 /* ViewModells */ = {
+			isa = PBXGroup;
+			children = (
+				DB36AD5421ABEE54001095AF /* ViewModelProtocols.swift */,
+				DB3ACCE421AC485500BD9132 /* ListViewModel */,
+				DB3ACCE321AC483C00BD9132 /* MapViewModels */,
+			);
+			path = ViewModells;
+			sourceTree = "<group>";
+		};
+		DB3ACCE121AC481700BD9132 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		DB3ACCE221AC482800BD9132 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DB3B2E7821AADE5100C10718 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DB3ACCE321AC483C00BD9132 /* MapViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DB36AD5021ABAB7B001095AF /* PowerRangerViewModel.swift */,
+				DB3B2EB221AB0B1300C10718 /* MapViewModel.swift */,
+			);
+			path = MapViewModels;
+			sourceTree = "<group>";
+		};
+		DB3ACCE421AC485500BD9132 /* ListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */,
+				DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */,
+			);
+			path = ListViewModel;
+			sourceTree = "<group>";
+		};
 		DB3B2E6A21AADE5100C10718 = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				DB3B2EA721AAF3C900C10718 /* Utils */,
+				DB3ACCE021AC47D700BD9132 /* ViewModells */,
 				DB3B2E9C21AAE9E800C10718 /* Models */,
-				DB3B2E9B21AAE9E000C10718 /* Modules */,
+				DB3B2E9B21AAE9E000C10718 /* Views */,
 				DB3B2E9921AAE97900C10718 /* Resources */,
 				DB3B2E7621AADE5100C10718 /* AppDelegate.swift */,
 				DB3B2E7A21AADE5100C10718 /* Main.storyboard */,
@@ -129,12 +174,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DB3B2E9B21AAE9E000C10718 /* Modules */ = {
+		DB3B2E9B21AAE9E000C10718 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DB3B2E9D21AAEB1C00C10718 /* Main */,
+				DB3ACCE221AC482800BD9132 /* Main */,
+				DB3ACCE121AC481700BD9132 /* ListView */,
+				DB3B2E9F21AAEB3400C10718 /* MapView */,
 			);
-			path = Modules;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DB3B2E9C21AAE9E800C10718 /* Models */ = {
@@ -146,35 +193,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DB3B2E9D21AAEB1C00C10718 /* Main */ = {
+		DB3B2E9F21AAEB3400C10718 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				DB3B2E9F21AAEB3400C10718 /* View */,
-				DB3B2E9E21AAEB2C00C10718 /* ViewModel */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		DB3B2E9E21AAEB2C00C10718 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */,
-				DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */,
-				DB3B2EB221AB0B1300C10718 /* MapViewModel.swift */,
-				DB36AD5021ABAB7B001095AF /* PowerRangerViewModel.swift */,
-				DB36AD5421ABEE54001095AF /* ViewModelProtocols.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		DB3B2E9F21AAEB3400C10718 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DB3B2E7821AADE5100C10718 /* ViewController.swift */,
 				DB3B2EA421AAEDAA00C10718 /* PowerRangerView.swift */,
-				DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */,
 			);
-			path = View;
+			path = MapView;
 			sourceTree = "<group>";
 		};
 		DB3B2EA721AAF3C900C10718 /* Utils */ = {
