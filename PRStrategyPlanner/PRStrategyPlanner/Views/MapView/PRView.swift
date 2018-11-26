@@ -8,24 +8,29 @@
 
 import UIKit
 
-final class PowerRangerView: UIView {
+final class PRView: UIView {
   typealias CompleteClosure = () -> Void
+  static let size: CGFloat = 40
   
-  private let aniDuration = 0.5
+  private let aniDuration = 0.2
   private var aniLayer: CALayer!
   
-  override init(frame: CGRect) {
+  init(frame: CGRect, color: UIColor) {
     super.init(frame: frame)
     //Prevent multi-drag issues for now
     isExclusiveTouch = true
     aniLayer = CALayer()
-    aniLayer.backgroundColor = UIColor.red.cgColor
+    aniLayer.backgroundColor = color.cgColor
     aniLayer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
     layer.addSublayer(aniLayer)
   }
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  func getLayerColor() -> UIColor {
+    return UIColor(cgColor: aniLayer.backgroundColor!)
   }
   
   func runShowAnimation(_ completed: @escaping CompleteClosure = {}) {

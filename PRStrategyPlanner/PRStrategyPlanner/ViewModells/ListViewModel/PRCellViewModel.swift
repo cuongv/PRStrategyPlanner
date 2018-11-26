@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct PRListCellViewModel {
+struct PRCellViewModel {
   var name: String
   var color: UIColor
   var selected: Bool

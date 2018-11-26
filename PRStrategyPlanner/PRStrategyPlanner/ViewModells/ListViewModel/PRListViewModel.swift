@@ -9,7 +9,7 @@
 import Foundation
 
 final class PRListViewModel: ViewModelArrayProtocol {
-  typealias T = PRListCellViewModel
+  typealias T = PRCellViewModel
   var state: State<T> {
     didSet {
       callback(state)
@@ -19,11 +19,11 @@ final class PRListViewModel: ViewModelArrayProtocol {
 
   init(callback: @escaping (State<T>) -> Void) {
     self.callback = callback
-    let cellViewModels = [PRListCellViewModel(name: "Red", color: .red, selected: false),
-                      PRListCellViewModel(name: "Yellow", color: .yellow, selected: false),
-                      PRListCellViewModel(name: "Green", color: .green, selected: false),
-                      PRListCellViewModel(name: "Blue", color: .blue, selected: false),
-                      PRListCellViewModel(name: "Black", color: .black, selected: false)]
+    let cellViewModels = [PRCellViewModel(name: "Red", color: .red, selected: false),
+                      PRCellViewModel(name: "Yellow", color: .yellow, selected: false),
+                      PRCellViewModel(name: "Green", color: .green, selected: false),
+                      PRCellViewModel(name: "Blue", color: .blue, selected: false),
+                      PRCellViewModel(name: "Black", color: .black, selected: false)]
     self.state = State(data: cellViewModels, editingStype: .none)
   }
   
@@ -31,14 +31,14 @@ final class PRListViewModel: ViewModelArrayProtocol {
     return state.data.count
   }
   
-  func getItem(atIndex index: Int) -> PRListCellViewModel? {
+  func getItem(atIndex index: Int) -> PRCellViewModel? {
     guard index < state.data.count else { return nil }
     return state.data[index]
   }
   
   func pressedItem(atIndex index: IndexPath) {
     if let item = getItem(atIndex: index.row) {
-      let newItem = PRListCellViewModel(name: item.name, color: item.color, selected: !item.selected)
+      let newItem = PRCellViewModel(name: item.name, color: item.color, selected: !item.selected)
       state.editingStype = .update(newItem, index.row)
     }
   }

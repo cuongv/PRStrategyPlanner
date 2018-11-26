@@ -9,33 +9,46 @@
 import UIKit
 
 class ViewController: UIViewController {
-  @IBOutlet weak var viewMap: UIView!
+  @IBOutlet weak var viewMap: PRMapView!
   @IBOutlet weak var tblViewPR: UITableView!
   private var prListViewModel: PRListViewModel!
-  private var mapViewModel = MapViewModel()
+  private var mapViewModel: PRMapViewModel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    mapViewModel.setInsertCallback { insertedPRModel in
-      
+    mapViewModel = PRMapViewModel { [weak self] state in
+      switch state.editingStype {
+      case let .insert(powerRangerVM, _):
+        self?.addNewPR(powerRangerVM)
+      case let .remove(powerRangerVM, _):
+        self?.removePR(powerRangerVM)
+      default:
+        break
+      }
     }
-    
-    mapViewModel.setRemoveCallback { insertedPRModel in
-      
-    }
-    
+
     prListViewModel = PRListViewModel { [weak self] state in
       switch state.editingStype {
-      case let .update(_, index):
+      case let .update(prCellVM, index):
         self?.tblViewPR.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+        self?.mapViewModel.updateItem(prCellVM)
       default:
         self?.tblViewPR.reloadData()
-        break
       }
     }
   }
   
   @IBAction func btnSaveClicked(_ sender: Any) {
+  }
+}
+
+extension ViewController {
+  func addNewPR(_ powerRangerVM: PRViewViewModel) {
+    viewMap.addNewPR(powerRangerVM)
+  }
+  
+  func removePR(_ powerRangerVM: PRViewViewModel) {
+    viewMap.removePR(powerRangerVM)
   }
 }
 

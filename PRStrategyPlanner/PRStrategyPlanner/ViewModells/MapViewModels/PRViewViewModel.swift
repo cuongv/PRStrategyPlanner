@@ -8,8 +8,8 @@
 
 import UIKit
 
-struct PowerRangerViewModel {
-  var color: UIColor
+struct PRViewViewModel {
   var x: Int
   var y: Int
+  var color: UIColor
 }

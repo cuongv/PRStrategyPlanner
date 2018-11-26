@@ -12,7 +12,7 @@ class PRTableViewCell: UITableViewCell {
   @IBOutlet weak var viewColor: UIView!
   @IBOutlet weak var lblColorName: UILabel!
 
-  func configCell(_ cellVM: PRListCellViewModel?) {
+  func configCell(_ cellVM: PRCellViewModel?) {
     if let cellVM = cellVM {
       lblColorName.text = cellVM.name
       if cellVM.selected {

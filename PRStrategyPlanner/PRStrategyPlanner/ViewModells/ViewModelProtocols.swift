@@ -17,7 +17,7 @@ struct State<T> {
   enum EditingStype {
     case insert(T, Int)
     case update(T, Int)
-    case remove(Int)
+    case remove(T, Int)
     case none
   }
   var data: [T]
@@ -32,7 +32,7 @@ struct State<T> {
         } else {
           assertionFailure("Index out of bound")
         }
-      case let .remove(index):
+      case let .remove(_, index):
         data.remove(at: index)
       default:
         break

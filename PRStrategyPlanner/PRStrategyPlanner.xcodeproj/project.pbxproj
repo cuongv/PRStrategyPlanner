@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB36AD5121ABAB7B001095AF /* PowerRangerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36AD5021ABAB7B001095AF /* PowerRangerViewModel.swift */; };
+		DB36AD5121ABAB7B001095AF /* PRViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36AD5021ABAB7B001095AF /* PRViewViewModel.swift */; };
 		DB36AD5521ABEE54001095AF /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36AD5421ABEE54001095AF /* ViewModelProtocols.swift */; };
+		DB3ACCE621AC4D9200BD9132 /* PRMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ACCE521AC4D9200BD9132 /* PRMapView.swift */; };
 		DB3B2E7721AADE5100C10718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2E7621AADE5100C10718 /* AppDelegate.swift */; };
 		DB3B2E7921AADE5100C10718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2E7821AADE5100C10718 /* ViewController.swift */; };
 		DB3B2E7C21AADE5100C10718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3B2E7A21AADE5100C10718 /* Main.storyboard */; };
@@ -18,12 +19,12 @@
 		DB3B2E8F21AADE5400C10718 /* PRStrategyPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2E8E21AADE5400C10718 /* PRStrategyPlannerTests.swift */; };
 		DB3B2EA221AAED2D00C10718 /* PowerRanger+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA021AAED2D00C10718 /* PowerRanger+CoreDataClass.swift */; };
 		DB3B2EA321AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA121AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift */; };
-		DB3B2EA521AAEDAA00C10718 /* PowerRangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA421AAEDAA00C10718 /* PowerRangerView.swift */; };
+		DB3B2EA521AAEDAA00C10718 /* PRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA421AAEDAA00C10718 /* PRView.swift */; };
 		DB3B2EA921AAF42100C10718 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EA821AAF42100C10718 /* ColorUtils.swift */; };
 		DB3B2EAD21AAF6BE00C10718 /* PRListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */; };
-		DB3B2EAF21AAF70300C10718 /* PRListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */; };
+		DB3B2EAF21AAF70300C10718 /* PRCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EAE21AAF70300C10718 /* PRCellViewModel.swift */; };
 		DB3B2EB121AB001700C10718 /* PRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */; };
-		DB3B2EB321AB0B1300C10718 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EB221AB0B1300C10718 /* MapViewModel.swift */; };
+		DB3B2EB321AB0B1300C10718 /* PRMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EB221AB0B1300C10718 /* PRMapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DB36AD5021ABAB7B001095AF /* PowerRangerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerRangerViewModel.swift; sourceTree = "<group>"; };
+		DB36AD5021ABAB7B001095AF /* PRViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRViewViewModel.swift; sourceTree = "<group>"; };
 		DB36AD5421ABEE54001095AF /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
+		DB3ACCE521AC4D9200BD9132 /* PRMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRMapView.swift; sourceTree = "<group>"; };
 		DB3B2E7321AADE5100C10718 /* PRStrategyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRStrategyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3B2E7621AADE5100C10718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3B2E7821AADE5100C10718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,12 +54,12 @@
 		DB3B2E9021AADE5400C10718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB3B2EA021AAED2D00C10718 /* PowerRanger+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PowerRanger+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DB3B2EA121AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PowerRanger+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DB3B2EA421AAEDAA00C10718 /* PowerRangerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerRangerView.swift; sourceTree = "<group>"; };
+		DB3B2EA421AAEDAA00C10718 /* PRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRView.swift; sourceTree = "<group>"; };
 		DB3B2EA821AAF42100C10718 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListViewModel.swift; sourceTree = "<group>"; };
-		DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListCellViewModel.swift; sourceTree = "<group>"; };
+		DB3B2EAE21AAF70300C10718 /* PRCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRCellViewModel.swift; sourceTree = "<group>"; };
 		DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRTableViewCell.swift; sourceTree = "<group>"; };
-		DB3B2EB221AB0B1300C10718 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		DB3B2EB221AB0B1300C10718 /* PRMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRMapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +109,8 @@
 		DB3ACCE321AC483C00BD9132 /* MapViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				DB36AD5021ABAB7B001095AF /* PowerRangerViewModel.swift */,
-				DB3B2EB221AB0B1300C10718 /* MapViewModel.swift */,
+				DB36AD5021ABAB7B001095AF /* PRViewViewModel.swift */,
+				DB3B2EB221AB0B1300C10718 /* PRMapViewModel.swift */,
 			);
 			path = MapViewModels;
 			sourceTree = "<group>";
@@ -116,7 +118,7 @@
 		DB3ACCE421AC485500BD9132 /* ListViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */,
+				DB3B2EAE21AAF70300C10718 /* PRCellViewModel.swift */,
 				DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */,
 			);
 			path = ListViewModel;
@@ -196,7 +198,8 @@
 		DB3B2E9F21AAEB3400C10718 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
-				DB3B2EA421AAEDAA00C10718 /* PowerRangerView.swift */,
+				DB3B2EA421AAEDAA00C10718 /* PRView.swift */,
+				DB3ACCE521AC4D9200BD9132 /* PRMapView.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -334,16 +337,17 @@
 				DB3B2E7F21AADE5100C10718 /* PRStrategyPlanner.xcdatamodeld in Sources */,
 				DB3B2EA921AAF42100C10718 /* ColorUtils.swift in Sources */,
 				DB3B2E7921AADE5100C10718 /* ViewController.swift in Sources */,
-				DB36AD5121ABAB7B001095AF /* PowerRangerViewModel.swift in Sources */,
+				DB36AD5121ABAB7B001095AF /* PRViewViewModel.swift in Sources */,
 				DB3B2EA321AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift in Sources */,
 				DB3B2EA221AAED2D00C10718 /* PowerRanger+CoreDataClass.swift in Sources */,
 				DB3B2E7721AADE5100C10718 /* AppDelegate.swift in Sources */,
-				DB3B2EAF21AAF70300C10718 /* PRListCellViewModel.swift in Sources */,
+				DB3ACCE621AC4D9200BD9132 /* PRMapView.swift in Sources */,
+				DB3B2EAF21AAF70300C10718 /* PRCellViewModel.swift in Sources */,
 				DB3B2EAD21AAF6BE00C10718 /* PRListViewModel.swift in Sources */,
-				DB3B2EA521AAEDAA00C10718 /* PowerRangerView.swift in Sources */,
+				DB3B2EA521AAEDAA00C10718 /* PRView.swift in Sources */,
 				DB36AD5521ABEE54001095AF /* ViewModelProtocols.swift in Sources */,
 				DB3B2EB121AB001700C10718 /* PRTableViewCell.swift in Sources */,
-				DB3B2EB321AB0B1300C10718 /* MapViewModel.swift in Sources */,
+				DB3B2EB321AB0B1300C10718 /* PRMapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3B5A48TYG4;
 				INFOPLIST_FILE = PRStrategyPlanner/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,6 +531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3B5A48TYG4;
 				INFOPLIST_FILE = PRStrategyPlanner/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
