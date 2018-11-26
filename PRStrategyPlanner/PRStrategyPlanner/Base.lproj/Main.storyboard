@@ -23,6 +23,9 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Rangers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAw-tw-GFL">
                                         <rect key="frame" x="0.0" y="9.5" width="137" height="25.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="137" id="FZY-Tn-bv6"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -37,7 +40,7 @@
                                         <rect key="frame" x="932" y="0.0" width="60" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="RLj-Np-4vq"/>
-                                            <constraint firstAttribute="width" constant="60" id="sec-in-0Xv"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="sec-in-0Xv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Save"/>
@@ -60,28 +63,41 @@
                                 <rect key="frame" x="16" y="64" width="288" height="688"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PRCell" id="fZV-4A-WCg" customClass="PRTableViewCell" customModule="PRStrategyPlanner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="288" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PRCell" rowHeight="66" id="fZV-4A-WCg" customClass="PRTableViewCell" customModule="PRStrategyPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fZV-4A-WCg" id="p68-Cq-L2c">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-qJ-U6C">
-                                                    <rect key="frame" x="8" y="8" width="50" height="50.5"/>
+                                                    <rect key="frame" x="8" y="8" width="44" height="44"/>
                                                     <color key="backgroundColor" red="0.98999999999999999" green="0.13" blue="0.14999999999999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="2ek-qJ-U6C" secondAttribute="height" id="CQn-V1-9te"/>
-                                                        <constraint firstAttribute="height" constant="50" id="USG-XE-1HN"/>
+                                                        <constraint firstAttribute="height" constant="44" id="USG-XE-1HN"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftQ-gT-0pB">
+                                                    <rect key="frame" x="64" y="18" width="201" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2ek-qJ-U6C" firstAttribute="top" secondItem="p68-Cq-L2c" secondAttribute="top" constant="8" id="2hV-Tg-Hfi"/>
                                                 <constraint firstAttribute="bottom" secondItem="2ek-qJ-U6C" secondAttribute="bottom" constant="8" id="9NX-eG-KN7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ftQ-gT-0pB" secondAttribute="trailing" constant="8" id="EFD-iu-Np7"/>
+                                                <constraint firstItem="ftQ-gT-0pB" firstAttribute="centerY" secondItem="2ek-qJ-U6C" secondAttribute="centerY" id="Wx0-Pn-rNT"/>
                                                 <constraint firstItem="2ek-qJ-U6C" firstAttribute="leading" secondItem="p68-Cq-L2c" secondAttribute="leading" constant="8" id="k59-Li-s5p"/>
+                                                <constraint firstItem="ftQ-gT-0pB" firstAttribute="leading" secondItem="2ek-qJ-U6C" secondAttribute="trailing" constant="12" id="wkp-ua-fLE"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblColorName" destination="ftQ-gT-0pB" id="LCc-Lz-Dxc"/>
+                                            <outlet property="viewColor" destination="2ek-qJ-U6C" id="Obw-bl-EDw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

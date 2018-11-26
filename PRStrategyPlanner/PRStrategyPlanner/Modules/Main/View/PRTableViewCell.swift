@@ -9,7 +9,15 @@
 import UIKit
 
 class PRTableViewCell: UITableViewCell {
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+  @IBOutlet weak var viewColor: UIView!
+  @IBOutlet weak var lblColorName: UILabel!
+
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
+  
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    
+  }
 }

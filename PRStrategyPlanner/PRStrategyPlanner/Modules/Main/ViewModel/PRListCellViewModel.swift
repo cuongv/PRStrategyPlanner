@@ -8,7 +8,23 @@
 
 import UIKit
 
-struct PRListCellViewModel {
+final class PRListCellViewModel {
   var name: String
   var color: UIColor
+  var isSelected: Bool {
+    didSet {
+      reloadCellCallback()
+    }
+  }
+  var reloadCellCallback = {}
+  
+  init(name: String, color: UIColor, isSelected: Bool = false) {
+    self.name = name
+    self.color = color
+    self.isSelected = isSelected
+  }
+
+  func cellPressed() {
+    isSelected = !isSelected
+  }
 }

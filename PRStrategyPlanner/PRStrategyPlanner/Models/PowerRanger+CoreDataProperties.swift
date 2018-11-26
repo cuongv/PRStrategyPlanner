@@ -11,10 +11,10 @@ import Foundation
 import CoreData
 
 extension PowerRanger {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<PowerRanger> {
-        return NSFetchRequest<PowerRanger>(entityName: "PowerRanger")
-    }
-    @NSManaged public var color: String?
-    @NSManaged public var x: Int16
-    @NSManaged public var y: Int16
+  @nonobjc public class func fetchRequest() -> NSFetchRequest<PowerRanger> {
+    return NSFetchRequest<PowerRanger>(entityName: "PowerRanger")
+  }
+  @NSManaged public var color: String?
+  @NSManaged public var x: Int16
+  @NSManaged public var y: Int16
 }

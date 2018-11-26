@@ -9,7 +9,7 @@
 import UIKit
 
 final class PowerRangerView: UIView {
-  typealias CompleteBlock = () -> Void
+  typealias CompleteClosure = () -> Void
   
   private let aniDuration = 0.5
   private var aniLayer: CALayer!
@@ -28,7 +28,7 @@ final class PowerRangerView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func runShowAnimation(_ completed: @escaping CompleteBlock = {}) {
+  func runShowAnimation(_ completed: @escaping CompleteClosure = {}) {
     CATransaction.begin()
     CATransaction.setAnimationDuration(aniDuration)
     CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(controlPoints: 0.3, 0.6, 0.7, 1.3))
@@ -53,7 +53,7 @@ final class PowerRangerView: UIView {
     CATransaction.commit()
   }
   
-  func runHideAnimation(_ completed: @escaping CompleteBlock = {}) {
+  func runHideAnimation(_ completed: @escaping CompleteClosure = {}) {
     CATransaction.begin()
     CATransaction.setAnimationDuration(aniDuration)
     CATransaction.setCompletionBlock {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB36AD5121ABAB7B001095AF /* PowerRangerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36AD5021ABAB7B001095AF /* PowerRangerViewModel.swift */; };
 		DB3B2E7721AADE5100C10718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2E7621AADE5100C10718 /* AppDelegate.swift */; };
 		DB3B2E7921AADE5100C10718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2E7821AADE5100C10718 /* ViewController.swift */; };
 		DB3B2E7C21AADE5100C10718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3B2E7A21AADE5100C10718 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		DB3B2EAD21AAF6BE00C10718 /* PRListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */; };
 		DB3B2EAF21AAF70300C10718 /* PRListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */; };
 		DB3B2EB121AB001700C10718 /* PRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */; };
+		DB3B2EB321AB0B1300C10718 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2EB221AB0B1300C10718 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB36AD5021ABAB7B001095AF /* PowerRangerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerRangerViewModel.swift; sourceTree = "<group>"; };
 		DB3B2E7321AADE5100C10718 /* PRStrategyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRStrategyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3B2E7621AADE5100C10718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3B2E7821AADE5100C10718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListViewModel.swift; sourceTree = "<group>"; };
 		DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListCellViewModel.swift; sourceTree = "<group>"; };
 		DB3B2EB021AB001700C10718 /* PRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRTableViewCell.swift; sourceTree = "<group>"; };
+		DB3B2EB221AB0B1300C10718 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 				DB3B2EAA21AAF63100C10718 /* MainViewModel.swift */,
 				DB3B2EAC21AAF6BE00C10718 /* PRListViewModel.swift */,
 				DB3B2EAE21AAF70300C10718 /* PRListCellViewModel.swift */,
+				DB3B2EB221AB0B1300C10718 /* MapViewModel.swift */,
+				DB36AD5021ABAB7B001095AF /* PowerRangerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				DB3B2E7F21AADE5100C10718 /* PRStrategyPlanner.xcdatamodeld in Sources */,
 				DB3B2EA921AAF42100C10718 /* ColorUtils.swift in Sources */,
 				DB3B2E7921AADE5100C10718 /* ViewController.swift in Sources */,
+				DB36AD5121ABAB7B001095AF /* PowerRangerViewModel.swift in Sources */,
 				DB3B2EA321AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift in Sources */,
 				DB3B2EA221AAED2D00C10718 /* PowerRanger+CoreDataClass.swift in Sources */,
 				DB3B2E7721AADE5100C10718 /* AppDelegate.swift in Sources */,
@@ -312,6 +319,7 @@
 				DB3B2EA521AAEDAA00C10718 /* PowerRangerView.swift in Sources */,
 				DB3B2EB121AB001700C10718 /* PRTableViewCell.swift in Sources */,
 				DB3B2EAB21AAF63100C10718 /* MainViewModel.swift in Sources */,
+				DB3B2EB321AB0B1300C10718 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

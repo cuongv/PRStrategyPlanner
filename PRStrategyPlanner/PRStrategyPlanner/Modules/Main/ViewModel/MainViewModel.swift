@@ -8,13 +8,7 @@
 
 import Foundation
 
-struct MainViewModel {
-  private var prListViewModel = PRListViewModel() {
-    didSet {
-      self.reloadListTableBlock()
-    }
-  }
-  
-  //We may update this project with RxSwift late. User just block to bind data for now
-  var reloadListTableBlock = {}
+class MainViewModel {
+  private(set) var prListViewModel = PRListViewModel()
+  private(set) var mapViewModel = MapViewModel()
 }

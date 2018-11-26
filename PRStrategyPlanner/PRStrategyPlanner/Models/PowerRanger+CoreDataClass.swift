@@ -11,5 +11,5 @@ import Foundation
 import CoreData
 
 public class PowerRanger: NSManagedObject {
-
+  
 }
