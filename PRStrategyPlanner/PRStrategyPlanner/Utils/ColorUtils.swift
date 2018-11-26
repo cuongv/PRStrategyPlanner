@@ -48,7 +48,11 @@ extension UIColor {
     if components.count >= 4 {
       a = Float(components[3])
     }
-    let hex = String(format: "%02lX%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255), lroundf(a * 255))
+    let hex = String(format: "%02lX%02lX%02lX%02lX",
+                     lroundf(r * 255),
+                     lroundf(g * 255),
+                     lroundf(b * 255),
+                     lroundf(a * 255))
     return hex
   }
 }

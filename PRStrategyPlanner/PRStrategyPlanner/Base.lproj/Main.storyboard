@@ -23,9 +23,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power Rangers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAw-tw-GFL">
                                         <rect key="frame" x="0.0" y="9.5" width="137" height="25.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="137" id="FZY-Tn-bv6"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -37,10 +34,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoe-qD-T4U">
-                                        <rect key="frame" x="932" y="0.0" width="60" height="44"/>
+                                        <rect key="frame" x="955" y="0.0" width="37" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="RLj-Np-4vq"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="sec-in-0Xv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Save"/>
@@ -53,8 +49,10 @@
                                 <constraints>
                                     <constraint firstItem="TAw-tw-GFL" firstAttribute="leading" secondItem="zXz-Nu-apK" secondAttribute="leading" id="8fF-ER-UF1"/>
                                     <constraint firstAttribute="trailing" secondItem="eoe-qD-T4U" secondAttribute="trailing" id="CdP-jg-ujF"/>
+                                    <constraint firstItem="eoe-qD-T4U" firstAttribute="leading" secondItem="oql-q0-3ge" secondAttribute="trailing" constant="610" id="WAB-rN-8Yw"/>
                                     <constraint firstItem="TAw-tw-GFL" firstAttribute="centerY" secondItem="zXz-Nu-apK" secondAttribute="centerY" id="ZVS-mA-BN5"/>
                                     <constraint firstItem="oql-q0-3ge" firstAttribute="centerY" secondItem="zXz-Nu-apK" secondAttribute="centerY" id="m6f-Gb-5jB"/>
+                                    <constraint firstItem="oql-q0-3ge" firstAttribute="leading" secondItem="TAw-tw-GFL" secondAttribute="trailing" constant="167" id="mSc-kt-NLa"/>
                                     <constraint firstItem="eoe-qD-T4U" firstAttribute="centerY" secondItem="zXz-Nu-apK" secondAttribute="centerY" id="rWd-31-Rb9"/>
                                     <constraint firstAttribute="height" constant="44" id="xAs-uz-twI"/>
                                 </constraints>

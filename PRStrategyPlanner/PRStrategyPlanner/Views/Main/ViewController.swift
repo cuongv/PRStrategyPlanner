@@ -19,9 +19,9 @@ class ViewController: UIViewController {
     mapViewModel = PRMapViewModel { [weak self] state in
       switch state.editingStype {
       case let .insert(powerRangerVM, _):
-        self?.addNewPR(powerRangerVM)
+        self?.viewMap.addNewPR(powerRangerVM)
       case let .remove(powerRangerVM, _):
-        self?.removePR(powerRangerVM)
+        self?.viewMap.removePR(powerRangerVM)
       default:
         break
       }
@@ -39,16 +39,6 @@ class ViewController: UIViewController {
   }
   
   @IBAction func btnSaveClicked(_ sender: Any) {
-  }
-}
-
-extension ViewController {
-  func addNewPR(_ powerRangerVM: PRViewViewModel) {
-    viewMap.addNewPR(powerRangerVM)
-  }
-  
-  func removePR(_ powerRangerVM: PRViewViewModel) {
-    viewMap.removePR(powerRangerVM)
   }
 }
 
