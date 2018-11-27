@@ -17,7 +17,7 @@ final class CoreDataConnector: DataConnectorProtocol {
   }
   
   func saveData(data: [Any]) {
-    //Remove all old data - Improve it later
+    //Remove all old data - Improve it later by saving the change only
     let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: PowerRanger.fetchRequest())
     do {
       try mainContext.execute(batchDeleteRequest)
