@@ -10,6 +10,8 @@
 		DB36AD5121ABAB7B001095AF /* PRViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36AD5021ABAB7B001095AF /* PRViewViewModel.swift */; };
 		DB36AD5521ABEE54001095AF /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36AD5421ABEE54001095AF /* ViewModelProtocols.swift */; };
 		DB3ACCE621AC4D9200BD9132 /* PRMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ACCE521AC4D9200BD9132 /* PRMapView.swift */; };
+		DB3ACCE821AC692E00BD9132 /* DataProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ACCE721AC692D00BD9132 /* DataProtocols.swift */; };
+		DB3ACCEA21AC6BF400BD9132 /* CoreDataConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ACCE921AC6BF400BD9132 /* CoreDataConnector.swift */; };
 		DB3B2E7721AADE5100C10718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2E7621AADE5100C10718 /* AppDelegate.swift */; };
 		DB3B2E7921AADE5100C10718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B2E7821AADE5100C10718 /* ViewController.swift */; };
 		DB3B2E7C21AADE5100C10718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3B2E7A21AADE5100C10718 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 		DB36AD5021ABAB7B001095AF /* PRViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRViewViewModel.swift; sourceTree = "<group>"; };
 		DB36AD5421ABEE54001095AF /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
 		DB3ACCE521AC4D9200BD9132 /* PRMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRMapView.swift; sourceTree = "<group>"; };
+		DB3ACCE721AC692D00BD9132 /* DataProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtocols.swift; sourceTree = "<group>"; };
+		DB3ACCE921AC6BF400BD9132 /* CoreDataConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConnector.swift; sourceTree = "<group>"; };
 		DB3B2E7321AADE5100C10718 /* PRStrategyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRStrategyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3B2E7621AADE5100C10718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3B2E7821AADE5100C10718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 		DB3B2E9C21AAE9E800C10718 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB3ACCE721AC692D00BD9132 /* DataProtocols.swift */,
+				DB3ACCE921AC6BF400BD9132 /* CoreDataConnector.swift */,
 				DB3B2EA021AAED2D00C10718 /* PowerRanger+CoreDataClass.swift */,
 				DB3B2EA121AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift */,
 			);
@@ -337,6 +343,7 @@
 				DB3B2E7F21AADE5100C10718 /* PRStrategyPlanner.xcdatamodeld in Sources */,
 				DB3B2EA921AAF42100C10718 /* ColorUtils.swift in Sources */,
 				DB3B2E7921AADE5100C10718 /* ViewController.swift in Sources */,
+				DB3ACCEA21AC6BF400BD9132 /* CoreDataConnector.swift in Sources */,
 				DB36AD5121ABAB7B001095AF /* PRViewViewModel.swift in Sources */,
 				DB3B2EA321AAED2D00C10718 /* PowerRanger+CoreDataProperties.swift in Sources */,
 				DB3B2EA221AAED2D00C10718 /* PowerRanger+CoreDataClass.swift in Sources */,
@@ -348,6 +355,7 @@
 				DB36AD5521ABEE54001095AF /* ViewModelProtocols.swift in Sources */,
 				DB3B2EB121AB001700C10718 /* PRTableViewCell.swift in Sources */,
 				DB3B2EB321AB0B1300C10718 /* PRMapViewModel.swift in Sources */,
+				DB3ACCE821AC692E00BD9132 /* DataProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,7 @@ struct State<T> {
     case remove(T, Int)
     case none
   }
+  
   var data: [T]
   var editingStype: EditingStype {
     didSet {

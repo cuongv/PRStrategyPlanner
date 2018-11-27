@@ -14,11 +14,14 @@ final class PRView: UIView {
   
   private let aniDuration = 0.2
   private var aniLayer: CALayer!
+  var viewModel: PRViewViewModel!
   
-  init(frame: CGRect, color: UIColor) {
+  init(frame: CGRect, color: UIColor, viewModel: PRViewViewModel) {
     super.init(frame: frame)
     //Prevent multi-drag issues for now
     isExclusiveTouch = true
+    self.viewModel = viewModel
+    
     aniLayer = CALayer()
     aniLayer.backgroundColor = color.cgColor
     aniLayer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
@@ -31,6 +34,11 @@ final class PRView: UIView {
   
   func getLayerColor() -> UIColor {
     return UIColor(cgColor: aniLayer.backgroundColor!)
+  }
+  
+  func updatePosition() {
+    viewModel.x = Int16(frame.origin.x)
+    viewModel.y = Int16(frame.origin.y)
   }
   
   func runShowAnimation(_ completed: @escaping CompleteClosure = {}) {

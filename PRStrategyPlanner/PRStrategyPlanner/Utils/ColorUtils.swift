@@ -38,15 +38,21 @@ extension UIColor {
   }
   
   var toHex: String? {
-    guard let components = cgColor.components, components.count >= 3 else {
-      return nil
-    }
-    let r = Float(components[0])
-    let g = Float(components[1])
-    let b = Float(components[2])
-    var a = Float(1.0)
-    if components.count >= 4 {
-      a = Float(components[3])
+    var r: Float, g: Float, b: Float, a = Float(1.0)
+    if let components = cgColor.components, components.count >= 3 {
+      r = Float(components[0])
+      g = Float(components[1])
+      b = Float(components[2])
+      if components.count >= 4 {
+        a = Float(components[3])
+      }
+    } else {
+      var white = CGFloat(0.0), alpha = CGFloat(0.0)
+      getWhite(&white, alpha: &alpha)
+      r = Float(white)
+      g = Float(white)
+      b = Float(white)
+      a = Float(alpha)
     }
     let hex = String(format: "%02lX%02lX%02lX%02lX",
                      lroundf(r * 255),

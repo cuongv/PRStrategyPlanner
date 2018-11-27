@@ -8,8 +8,14 @@
 
 import UIKit
 
-struct PRViewViewModel {
-  var x: Int
-  var y: Int
+final class PRViewViewModel {
+  var x: Int16
+  var y: Int16
   var color: UIColor
+  
+  init(x: Int16, y: Int16, color: UIColor) {
+    self.x = x
+    self.y = y
+    self.color = color
+  }
 }

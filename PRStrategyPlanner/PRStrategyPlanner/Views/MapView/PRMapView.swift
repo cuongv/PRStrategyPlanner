@@ -13,7 +13,6 @@ class PRMapView: UIView {
   private var attachment: UIAttachmentBehavior!
   private var collision: UICollisionBehavior!
   private var customBehavior: UIDynamicItemBehavior!
-  
   var listRangerView = [PRView]()
   
   override func awakeFromNib() {
@@ -24,6 +23,11 @@ class PRMapView: UIView {
     collision = UICollisionBehavior()
     collision.translatesReferenceBoundsIntoBoundary = true
     collision.collisionMode = .everything
+    collision.action = { [unowned self] in
+      for prView in self.listRangerView {
+        prView.updatePosition()
+      }
+    }
     animator.addBehavior(collision)
     
     customBehavior = UIDynamicItemBehavior()
@@ -36,11 +40,12 @@ class PRMapView: UIView {
   }
   
   func addNewPR(_ powerRangerVM: PRViewViewModel) {
-    let prView = PRView(frame: CGRect(x: self.bounds.size.width / 2,
-                                               y: self.bounds.size.height / 2,
-                                               width: PRView.size,
-                                               height: PRView.size),
-                                 color: powerRangerVM.color)
+    let prView = PRView(frame: CGRect(x: CGFloat(powerRangerVM.x),
+                                      y: CGFloat(powerRangerVM.y),
+                                      width: PRView.size,
+                                      height: PRView.size),
+                                 color: powerRangerVM.color,
+                                 viewModel: powerRangerVM)
     self.addSubview(prView)
     prView.runShowAnimation()
     
@@ -71,6 +76,11 @@ class PRMapView: UIView {
       attachment.length = 0
       attachment.frequency = 10
       attachment.damping = 5
+      if let prView = recognizer.view as? PRView {
+        attachment.action = {
+          prView.updatePosition()
+        }
+      }
       animator.addBehavior(attachment)
     case .changed:
       attachment.anchorPoint = recognizer.location(in: self)

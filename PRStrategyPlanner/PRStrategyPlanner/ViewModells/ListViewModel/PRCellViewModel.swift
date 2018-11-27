@@ -8,8 +8,14 @@
 
 import UIKit
 
-struct PRCellViewModel {
+final class PRCellViewModel {
   var name: String
   var color: UIColor
   var selected: Bool
+  
+  init(name: String, color: UIColor, selected: Bool) {
+    self.name = name
+    self.color = color
+    self.selected = selected
+  }
 }

@@ -16,7 +16,20 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    mapViewModel = PRMapViewModel { [weak self] state in
+    
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    let connector = CoreDataConnector(mainContext: appDelegate.persistentContainer.viewContext)
+
+    prListViewModel = PRListViewModel(connector: connector) { [weak self] state in
+      switch state.editingStype {
+      case let .update(prCellVM, index):
+        self?.tblViewPR.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
+        self?.mapViewModel.updateItem(prCellVM)
+      default:
+        self?.tblViewPR.reloadData()
+      }
+    }
+    mapViewModel = PRMapViewModel(connector: connector) { [weak self] state in
       switch state.editingStype {
       case let .insert(powerRangerVM, _):
         self?.viewMap.addNewPR(powerRangerVM)
@@ -26,19 +39,16 @@ class ViewController: UIViewController {
         break
       }
     }
-
-    prListViewModel = PRListViewModel { [weak self] state in
-      switch state.editingStype {
-      case let .update(prCellVM, index):
-        self?.tblViewPR.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
-        self?.mapViewModel.updateItem(prCellVM)
-      default:
-        self?.tblViewPR.reloadData()
-      }
-    }
+    mapViewModel.loadData()
   }
   
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    mapViewModel.defaultPosition = CGPoint(x: viewMap.frame.size.width / 2, y: viewMap.frame.size.height / 2)
+  }
+
   @IBAction func btnSaveClicked(_ sender: Any) {
+    mapViewModel.saveData()
   }
 }
 
