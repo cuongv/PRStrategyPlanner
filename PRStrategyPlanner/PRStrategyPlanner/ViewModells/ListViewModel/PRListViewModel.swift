@@ -10,7 +10,7 @@ import UIKit
 
 final class PRListViewModel: ViewModelArrayProtocol {
   typealias T = PRCellViewModel
-  var state: State<T> {
+  private(set) var state: State<T> {
     didSet {
       callback(state)
     }
@@ -28,11 +28,9 @@ final class PRListViewModel: ViewModelArrayProtocol {
                       PRCellViewModel(name: "Black", color: .black, selected: false)]
    //Sync the data in the list to match with DB
     if let powerRangers = dataConnector.loadData() as? [PowerRanger] {
-      for prModel in powerRangers {
-        if let strColor = prModel.color {
-          for prCellVM in cellViewModels where strColor == prCellVM.color.toHex {
-            prCellVM.selected = true
-          }
+      for prCellVM in cellViewModels {
+        if powerRangers.filter({ $0.color == prCellVM.color.toHex }).count > 0 {
+          prCellVM.selected = true
         }
       }
     }
@@ -49,9 +47,8 @@ final class PRListViewModel: ViewModelArrayProtocol {
   }
   
   func pressedItem(atIndex index: IndexPath) {
-    if let item = getItem(atIndex: index.row) {
-      let newItem = PRCellViewModel(name: item.name, color: item.color, selected: !item.selected)
-      state.editingStype = .update(newItem, index.row)
-    }
+    guard let item = getItem(atIndex: index.row) else { return }
+    let newItem = PRCellViewModel(name: item.name, color: item.color, selected: !item.selected)
+    state.editingStype = .update(newItem, index.row)
   }
 }

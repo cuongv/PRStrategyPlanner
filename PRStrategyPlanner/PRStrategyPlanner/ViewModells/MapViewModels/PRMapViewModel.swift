@@ -11,7 +11,7 @@ import CoreData
 
 final class PRMapViewModel: ViewModelArrayProtocol {
   typealias T = PRViewViewModel
-  var state: State<T> {
+  private(set) var state: State<T> {
     didSet {
       callback(state)
     }
@@ -28,11 +28,10 @@ final class PRMapViewModel: ViewModelArrayProtocol {
   }
   
   func loadData() {
-    if let powerRangers = dataConnector.loadData() as? [PowerRanger] {
-      for prModel in powerRangers {
-        if let strColor = prModel.color, let color = UIColor(hex: strColor) {
-          state.editingStype = .insert(PRViewViewModel(x: prModel.x, y: prModel.y, color: color), state.data.count)
-        }
+    guard let powerRangers = dataConnector.loadData() as? [PowerRanger] else { return }
+    for prModel in powerRangers {
+      if let strColor = prModel.color, let color = UIColor(hex: strColor) {
+        state.editingStype = .insert(PRViewViewModel(x: prModel.x, y: prModel.y, color: color), state.data.count)
       }
     }
   }

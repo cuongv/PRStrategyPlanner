@@ -9,8 +9,8 @@
 import UIKit
 
 final class PRCellViewModel {
-  var name: String
-  var color: UIColor
+  private(set) var name: String
+  private(set) var color: UIColor
   var selected: Bool
   
   init(name: String, color: UIColor, selected: Bool) {

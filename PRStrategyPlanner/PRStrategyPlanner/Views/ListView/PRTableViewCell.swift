@@ -13,15 +13,9 @@ class PRTableViewCell: UITableViewCell {
   @IBOutlet weak var lblColorName: UILabel!
 
   func configCell(_ cellVM: PRCellViewModel?) {
-    if let cellVM = cellVM {
-      lblColorName.text = cellVM.name
-      if cellVM.selected {
-        lblColorName.textColor = .gray
-        viewColor.backgroundColor = .gray
-      } else {
-        viewColor.backgroundColor = cellVM.color
-        lblColorName.textColor = cellVM.color
-      }
-    }
+    guard let cellVM = cellVM else { return }
+    lblColorName.text = cellVM.name
+    lblColorName.textColor = cellVM.selected ? .gray : cellVM.color
+    viewColor.backgroundColor = cellVM.selected ? .gray : cellVM.color
   }
 }
