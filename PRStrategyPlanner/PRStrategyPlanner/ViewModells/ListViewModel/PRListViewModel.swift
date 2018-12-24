@@ -16,9 +16,9 @@ final class PRListViewModel: ViewModelArrayProtocol {
     }
   }
   private let callback: (State<T>) -> Void
-  private var dataConnector: DataConnectorProtocol
+  private var dataConnector: AnyConnector<PRViewViewModel>
 
-  init(connector: DataConnectorProtocol, callback: @escaping (State<T>) -> Void) {
+  init(connector: AnyConnector<PRViewViewModel>, callback: @escaping (State<T>) -> Void) {
     self.callback = callback
     self.dataConnector = connector
     let cellViewModels = [PRCellViewModel(name: "Red", color: .red, selected: false),
@@ -27,11 +27,10 @@ final class PRListViewModel: ViewModelArrayProtocol {
                       PRCellViewModel(name: "Blue", color: .blue, selected: false),
                       PRCellViewModel(name: "Black", color: .black, selected: false)]
    //Sync the data in the list to match with DB
-    if let powerRangers = dataConnector.loadData() as? [PowerRanger] {
-      for prCellVM in cellViewModels {
-        if powerRangers.filter({ $0.color == prCellVM.color.toHex }).count > 0 {
-          prCellVM.selected = true
-        }
+    let powerRangers = self.dataConnector.loadData()
+    for prCellVM in cellViewModels {
+      if powerRangers.filter({ $0.color.toHex == prCellVM.color.toHex }).count > 0 {
+        prCellVM.selected = true
       }
     }
     self.state = State(data: cellViewModels, editingStype: .none)

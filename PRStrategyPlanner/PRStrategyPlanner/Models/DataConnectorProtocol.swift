@@ -9,6 +9,7 @@
 import Foundation
 
 protocol DataConnectorProtocol {
-  func saveData(data: [Any])
-  func loadData() -> [Any]
+  associatedtype DataType
+  func saveData(data: [DataType])
+  func loadData() -> [DataType]
 }

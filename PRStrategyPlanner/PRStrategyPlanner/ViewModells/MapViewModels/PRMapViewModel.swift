@@ -17,10 +17,10 @@ final class PRMapViewModel: ViewModelArrayProtocol {
     }
   }
   private let callback: (State<T>) -> Void
-  private var dataConnector: DataConnectorProtocol
+  private var dataConnector: AnyConnector<T>
   var defaultPosition: CGPoint
   
-  init(connector: DataConnectorProtocol, position: CGPoint = CGPoint.zero, callback: @escaping (State<T>) -> Void) {
+  init(connector: AnyConnector<T>, position: CGPoint = CGPoint.zero, callback: @escaping (State<T>) -> Void) {
     self.callback = callback
     self.defaultPosition = position
     self.dataConnector = connector
@@ -28,11 +28,8 @@ final class PRMapViewModel: ViewModelArrayProtocol {
   }
   
   func loadData() {
-    guard let powerRangers = dataConnector.loadData() as? [PowerRanger] else { return }
-    for prModel in powerRangers {
-      if let strColor = prModel.color, let color = UIColor(hex: strColor) {
-        state.editingStype = .insert(PRViewViewModel(x: prModel.x, y: prModel.y, color: color), state.data.count)
-      }
+    for prModel in dataConnector.loadData() {
+      state.editingStype = .insert(prModel, state.data.count)
     }
   }
   
@@ -41,10 +38,8 @@ final class PRMapViewModel: ViewModelArrayProtocol {
       state.editingStype = .insert(PRViewViewModel(x: Int16(defaultPosition.x),
                                                    y: Int16(defaultPosition.y),
                                                    color: prCellVM.color), state.data.count)
-    } else {
-      if let index = state.data.index(where: { $0.color.toHex == prCellVM.color.toHex }) {
-        state.editingStype = .remove(state.data[index], index)
-      }
+    } else if let index = state.data.index(where: { $0.color.toHex == prCellVM.color.toHex }) {
+      state.editingStype = .remove(state.data[index], index)
     }
   }
   

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-    let connector = CoreDataConnector(mainContext: appDelegate.persistentContainer.viewContext)
+    let connector = AnyConnector<PRViewViewModel>(CoreDataConnector(mainContext: appDelegate.persistentContainer.viewContext))
 
     prListViewModel = PRListViewModel(connector: connector) { [weak self] state in
       switch state.editingStype {
