@@ -1,6 +1,6 @@
 # PRStrategyPlanner
 
-This project aim to experiment UIDynamicKit, CoreAnimation and basic of MVVM (maybe RxSwift later)
+This project aim to experiment UIDynamicKit, CoreAnimation and basic of MVVM.
 
 Some instructions:
 - Tap on a row to deploy power rangers, tap on the row again to remove it. There are animations when they show up and disappear.
